@@ -1,0 +1,101 @@
+.container-produtos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    width: 70%;
+    margin-right: 1rem;
+}
+
+.principal {
+    display: flex;
+    justify-content: space-between;
+}
+
+.titulo-logo {
+    display: flex;
+    align-items: center;
+}
+
+.titulo {
+    margin-left: 1rem;
+}
+
+.cards {
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: rgb(192, 237, 246);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 5px 5px 5px rgb(126, 120, 120);
+}
+
+.descricao {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 24px;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    font-weight: bold;
+    color: #000080;
+}
+
+.valor-produto {
+    font-weight: bold;
+}
+
+.controle {
+    margin-top: 1rem;
+}
+
+.inputs {
+    width: 5%;
+    text-align: center;
+    font-weight: bold;
+}
+
+.carrinho {
+    width: 30%;
+    margin-top: 1rem;
+    font-size: 22px;
+    padding: 7px 12px;
+    cursor: pointer;
+    background-color: #12d288;
+    border-radius: 4px;
+}
+
+.carrinho:hover {
+    background-color: #00ff7f;
+}
+
+.valor {
+    font-size: 22px;
+}
+
+.novoProduto {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.campo-delete {
+    padding: 9px 10px;
+}
+
+#carrinho-quantidade {
+    font-size: 20px;
+}
+
+.carrinho-vazio {
+    color: rgb(156, 40, 40);
+}
+
+.carrinho-cheio {
+    color: chartreuse;
+}
+
+.valor {
+    text-align: center;
+    width: 40%;
+}

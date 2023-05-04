@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="./css/style.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.2.96/css/materialdesignicons.min.css" />
+    </head>
+    <body class="corpo">
+        <nav class="barra-navegacao">
+            <div class="titulo-logo">
+                <img width="90px" src="./img/esportes.png" alt="" />
+                <h1 class="titulo">Loja virtual Z.C Esportes</h1>
+            </div>
+            <ul class="links-barra">
+                <li class="link">Cadastro</li>
+                <li class="link">Login</li>
+                <li class="link">Sobre</li>
+                <li class="link mdi mdi-cart-arrow-down carrinho-vazio" id="carrinho-quantidade">0</li>
+            </ul>
+        </nav>
+
+        <header class="principal">
+            <main class="container-produtos">
+                <div class="cards" data-nome="1">
+                    <img width="150px" src="./img/bola.png" alt="" />
+                    <p class="descricao">Bola de futebol</p>
+                    <span class="valor-produto">R$<span class="valor">120.00</span></span>
+                    <button class="carrinho mdi mdi-cart-arrow-down"></button>
+                </div>
+
+                <div class="cards">
+                    <img width="150px" src="./img/skate.png" alt="" />
+                    <p class="descricao">Skate</p>
+                    <span class="valor-produto">R$<span class="valor">560.00</span></span>
+                    <button class="carrinho mdi mdi-cart-arrow-down"></button>
+                </div>
+
+                <div class="cards">
+                    <img width="150px" src="./img/tenis.png" alt="" />
+                    <p class="descricao">Raquete</p>
+                    <span class="valor-produto">R$<span class="valor">1630.00</span></span>
+                    <button class="carrinho mdi mdi-cart-arrow-down"></button>
+                </div>
+
+                <div class="cards">
+                    <img width="150px" src="./img/chuteira.png" alt="" />
+                    <p class="descricao">Chuteira</p>
+                    <span class="valor-produto">R$<span class="valor">480.99</span></span>
+                    <button class="carrinho mdi mdi-cart-arrow-down"></button>
+                </div>
+
+                <div class="cards">
+                    <img width="150px" src="./img/uniforme-de-futebol.png" alt="" />
+                    <p class="descricao">Uniforme</p>
+                    <span class="valor-produto">R$<span class="valor">122.00</span></span>
+                    <button class="carrinho mdi mdi-cart-arrow-down"></button>
+                </div>
+
+                <div class="cards">
+                    <img width="150px" src="./img/bola-de-basquete.png" alt="" />
+                    <p class="descricao">Bola de basquete</p>
+                    <span class="valor-produto">R$<span class="valor">350.99</span></span>
+                    <button class="carrinho mdi mdi-cart-arrow-down"></button>
+                </div>
+
+                <div class="cards">
+                    <img width="150px" src="./img/bola-de-voleibol.png" alt="" />
+                    <p class="descricao">Bola de volei</p>
+                    <span class="valor-produto">R$<span class="valor">230.99</span></span>
+                    <button class="carrinho mdi mdi-cart-arrow-down"></button>
+                </div>
+
+                <div class="cards">
+                    <img width="150px" src="./img/bolaTenis.png" alt="" />
+                    <p class="descricao">Bola de tênis</p>
+                    <span class="valor-produto">R$<span class="valor">101.99</span></span>
+                    <button class="carrinho mdi mdi-cart-arrow-down"></button>
+                </div>
+
+                <div class="cards">
+                    <img width="150px" src="./img/pingue-pongue.png" alt="" />
+                    <p class="descricao">Bola ping-pong</p>
+                    <span class="valor-produto">R$<span class="valor">66.99</span></span>
+                    <button class="carrinho mdi mdi-cart-arrow-down"></button>
+                </div>
+
+                <div class="cards">
+                    <img width="150px" src="./img/bone-de-baseball.png" alt="" />
+                    <p class="descricao">Boné</p>
+                    <span class="valor-produto">R$<span class="valor">180.99</span></span>
+                    <button class="carrinho mdi mdi-cart-arrow-down"></button>
+                </div>
+
+                <div class="cards">
+                    <img width="150px" src="./img/luvas-de-mao.png" alt="" />
+                    <p class="descricao">Luvas</p>
+                    <span class="valor-produto">R$<span class="valor">80.99</span></span>
+                    <button class="carrinho mdi mdi-cart-arrow-down"></button>
+                </div>
+
+                <div class="cards">
+                    <img width="150px" src="./img/meias-de-futebol.png" alt="" />
+                    <p class="descricao">Meião</p>
+                    <span class="valor-produto">R$<span class="valor">78.99</span></span>
+                    <button class="carrinho mdi mdi-cart-arrow-down"></button>
+                </div>
+            </main>
+
+            <section class="campo-carrinhoValor">
+                <h2 class="titulo-itens">Itens do Carrinho</h2>
+                <button class="limpar-carrinho">Limpar Carrinho</button>
+                <div class="itens-carrinho">
+                    <ul id="campo-carrinho"></ul>
+                </div>
+
+                <div class="campo-valor">
+                    <h2 class="titulo-itens">Valor Total</h2>
+                    <span class="valorTotal"></span>
+                </div>
+            </section>
+        </header>
+
+        <script src="./js/main.js"></script>
+    </body>
+</html>
