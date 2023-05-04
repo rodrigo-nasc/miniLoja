@@ -99,9 +99,14 @@ function removeProduto(index) {
 }
 
 limpar.addEventListener("click", () => {
-    limparCarrinho(produtos);
+    limparCarrinho();
 });
 
-function limparCarrinho(produtos) {
-    produtos.splice(0, 2);
+function limparCarrinho() {
+    produtos.splice(0, produtos.length);
+    valores.splice(0, valores.length);
+    carrinho.innerHTML = "";
+
+    valorTotal();
+    quantidadeCarrinho(produtos);
 }
