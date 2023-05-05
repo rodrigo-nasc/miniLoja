@@ -1,6 +1,3 @@
-let produtos = [];
-let valores = [];
-
 const botaoAdd = document.querySelectorAll(".carrinho");
 const carrinho = document.querySelector("#campo-carrinho");
 const cards = document.querySelectorAll(".cards");
@@ -8,6 +5,12 @@ const limpar = document.querySelector(".limpar-carrinho");
 
 let resultadoValores = document.querySelector(".valorTotal");
 resultadoValores.textContent = "Não há nenhum produto no carrinho";
+
+let produtos = JSON.parse(localStorage.getItem("produtos")) || [];
+
+let valores = JSON.parse(localStorage.getItem("valores")) || [];
+
+mostrarProdutos();
 
 botaoAdd.forEach((botao, index) => {
     botao.addEventListener("click", () => {
@@ -31,6 +34,7 @@ function addObjProduct(index) {
 
     valores.push(Number(valor.textContent));
     console.log(valores);
+    salvarItensLocal(produtos, valores);
 
     mostrarProdutos();
 }
@@ -76,7 +80,21 @@ function valorTotal() {
 function quantidadeCarrinho(produtos) {
     const carrinhoItens = document.querySelector("#carrinho-quantidade");
     carrinhoItens.textContent = produtos.length;
+
     if (produtos.length >= 1) {
+        carrinhoItens.classList.add("carrinho-cheio");
+    } else {
+        carrinhoItens.classList.remove("carrinho-cheio");
+    }
+    localStorage.setItem("carrinho-quantidade", carrinhoItens.textContent);
+}
+
+// Recuperar valor do local storage ao recarregar a página
+const carrinhoQuantidade = localStorage.getItem("carrinho-quantidade");
+if (carrinhoQuantidade) {
+    const carrinhoItens = document.querySelector("#carrinho-quantidade");
+    carrinhoItens.textContent = carrinhoQuantidade;
+    if (carrinhoQuantidade >= 1) {
         carrinhoItens.classList.add("carrinho-cheio");
     } else {
         carrinhoItens.classList.remove("carrinho-cheio");
@@ -96,6 +114,7 @@ function removeProduto(index) {
     mostrarProdutos();
     valorTotal();
     quantidadeCarrinho(produtos);
+    salvarItensLocal(produtos, valores);
 }
 
 limpar.addEventListener("click", () => {
@@ -109,4 +128,11 @@ function limparCarrinho() {
 
     valorTotal();
     quantidadeCarrinho(produtos);
+
+    salvarItensLocal(produtos, valores);
+}
+
+function salvarItensLocal(produtos, valores) {
+    localStorage.setItem("produtos", JSON.stringify(produtos));
+    localStorage.setItem("valores", JSON.stringify(valores));
 }
